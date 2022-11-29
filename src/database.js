@@ -1,8 +1,8 @@
 const mongoose =require('mongoose');
 
+const ENTORNO = require('/config.json')
 
-
-mongoose.connect('mongodb+srv://Guillermo:Ragnarson11@cluster0.tqdy8.mongodb.net/kubernetes?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://'+ENTORNO.Produccion.user+':'+ENTORNO.Produccion.psw+'@cluster0.tqdy8.mongodb.net/kubernetes?retryWrites=true&w=majority',{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     
